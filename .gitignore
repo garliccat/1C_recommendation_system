@@ -1,0 +1,7 @@
+# datasets
+# reports
+.ipynb_checkpoints
+venv
+.vscode
+.idea
+__pycache__
