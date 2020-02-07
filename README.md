@@ -1,6 +1,6 @@
 
 ### Recommendation algorithm.
-Based on fetching data from accounting system exported report with rows: DateTime, Art.
+Based on fetching data from accounting system exported report with rows: DateTime, Art.  
 The example below is from 1C accounting software - most popular soft for business management in Russia (and most likely in all post-soviet countries).
 
 | Дата                | Номенклатура                                                         |
@@ -20,10 +20,10 @@ The example below is from 1C accounting software - most popular soft for busines
 | 31.01.2020 10:29:31 | а 0650N замок-крючок для стола L=50мм                                |
 | 31.01.2020 10:29:31 | а D EX 47/1100/908 SL м-зм ВНЕШ.крепл.д/стола 1100                   |
 
-The script gets the multiple xlsx files (don't ask why it is so, i wonder myself) and glues them together.
-Then it compiles the dictionary with all the unique goods as keys with collections of similar goods as values.
-The higher number of item in collection - the higher similarity with key item.
+The script gets the multiple xlsx files (don't ask why it is so, i wonder myself) and glues them together.  
+Then it compiles the dictionary with all the unique goods as keys with collections of similar goods as values.  
+The higher number of item in collection - the higher similarity with key item.  
 For example you buy eggs and this thing says you to buy flour and milk also.
 
-It's also suitable for calculating recommendation for particular client (buyer), but needs for some small changes.
+It's also suitable for calculating recommendation for particular client (buyer), but needs for some small changes.  
 Will init separate repo later with this stuff.
