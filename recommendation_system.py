@@ -8,6 +8,7 @@ from pandas import ExcelWriter
 import glob
 import datetime
 from collections import Counter
+from itertools import combinations
 
 
 ### main catalog initiate
@@ -74,3 +75,15 @@ print('\nTop {} recommended items for '.format(str(art_number)), list(catalog.ke
 # print('\n', catalog[list(catalog.keys())[5]].most_common(5))
 for art, _ in catalog[list(catalog.keys())[5]].most_common(5):
     print(art)
+
+# most frequent pairs of goods
+count = Counter()
+arts = sales.groupby(by='timestamp')['art'].apply(list)
+
+for sublist in arts:
+    count.update(Counter(combinations(sublist, 2)))
+
+most_populars = 10
+print(f'\n{most_populars} most popular goods pairs: ')
+for i in range(0, most_populars):
+    print(count.most_common(most_populars)[i][0], ' : number of occurences = ', count.most_common(most_populars)[i][1])
